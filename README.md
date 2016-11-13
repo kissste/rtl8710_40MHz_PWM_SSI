@@ -1,0 +1,1 @@
+# rtl8710_40MHz_SPI_SSI
