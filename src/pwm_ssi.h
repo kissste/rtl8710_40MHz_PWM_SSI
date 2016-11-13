@@ -29,7 +29,7 @@
 //#include "semphr.h"
 //#include "event_groups.h"
 
-#define SSI_MAX_LEN  3072
+#define SSI_MAX_LEN  4096
 
 extern struct blinken_cfg *blinken_get_config(void);
 
@@ -42,12 +42,33 @@ typedef struct {
 
 #define CPU_CLOCK_SEL_VALUE 0
 
-#define SCLK_FREQ 		10416666*1 // 41.66MHz CPU@166.66MHz @SPI1 ssi_idx=1 A-port
+//#define SCLK_FREQ 		20388888 // 20.83MHz CPU@166.66MHz @SPI1 ssi_idx=0 C-port
+#define SCLK_FREQ 		41666666 // 41.66MHz CPU@166.66MHz @SPI1 ssi_idx=1 A-port
 
-#define SPI1_MOSI  PA_1
-#define SPI1_MISO  PA_0
-#define SPI1_SCLK  PA_2
-#define SPI1_CS    PA_4
+// SPI0 (S0)
+#define SPI0C_MOSI	PC_2
+#define SPI0C_MISO	PC_3
+#define SPI0C_SCLK	PC_1
+#define SPI0C_CS	PC_0
+
+// SPI1 (S1)
+#define SPI1B_MOSI  PB_6
+#define SPI1B_MISO  PB_7
+#define SPI1B_SCLK  PB_5
+#define SPI1B_CS    PB_4
+
+// SPI2 (S2) for DEV 3V0
+// Please note that PA_7 need pull high before using GPIOA group
+#define SPI1A_MOSI  PA_1
+#define SPI1A_MISO  PA_0
+#define SPI1A_SCLK  PA_2
+#define SPI1A_CS    PA_4
+
+// SPI2 (S2)
+#define SPI2D_MOSI  PD_2
+#define SPI2D_MISO  PD_3
+#define SPI2D_SCLK  PD_1
+#define SPI2D_CS    PD_0
 
 extern SSI_t *SSI_init(uint16_t stream_len);
 

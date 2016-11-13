@@ -371,9 +371,12 @@ SRC_C += ../../../component/common/file_system/fatfs/disk_if/src/sdcard.c
 #utilities - xmodme update
 SRC_C += ../../../component/common/application/xmodem/uart_fw_update.c
 #user 
-SRC_C += ../src/ws2812.c
-SRC_C += ../src/blinken.c
-SRC_C += ../src/blinkensrv.c
+SRC_C += ../src/pwm_ssi.c
+#SRC_C += ../src/ws2812.c
+#SRC_C += ../src/blinken.c
+#SRC_C += ../src/blinkensrv.c
+
+
 
 # Generate obj list
 # -------------------------------------------------------------------
