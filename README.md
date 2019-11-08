@@ -3,7 +3,7 @@ This is an example of PWM based on 40MHz SSI stream (1-bit serial) for RTL8710, 
 
 
 ### Prerequisites
-You will need a RTL87810 module, an ARM Cortex-M compatible SWD debugger.
+You will need a RTL8710 module, an ARM Cortex-M compatible SWD debugger.
 
 RTL8710 modules are easy to find on eBay or Aliexpress, the B&T BT-00 variant
 is hard to miss. Pine64 is about to release their own version of this module,
